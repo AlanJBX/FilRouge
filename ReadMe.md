@@ -84,23 +84,23 @@ SOA :
 ### Améliorations potentielles
 
 IPv4 :
-* Mise en place d'un Packet Filter complète et totale d'un PF au sein de l'instance.
+- Mise en place d'un Packet Filter complète et totale d'un PF au sein de l'instance.
 
 Python :
-* Augmentation des extensions et métadonnées liées (pour les vidéos notamment)
-* Prise en compte du MIMEType
-* Gestion plus évoluées des erreurs (afin prendre en comptes les codes status)
-* Passage en API RESTfull
-* Mise en place de l'AutoDoc en lien avec les DocStrings rédigées
+- Augmentation des extensions et métadonnées liées (pour les vidéos notamment)
+- Prise en compte du MIMEType
+- Gestion plus évoluées des erreurs (afin prendre en comptes les codes status)
+- Passage en API RESTfull
+- Mise en place de l'AutoDoc en lien avec les DocStrings rédigées
 
 SSI :
-* Générateur de mot de passe aléatoire
+- Générateur de mot de passe aléatoire
 
 AWS / IAAS :
-* Automatisation de la création et de la gestion du bucket à partir d'un programme/script.
+- Automatisation de la création et de la gestion du bucket à partir d'un programme/script.
 
 SOA :
-* Génération des requêtes CURL prenant en compte la spécificité de mon programme HTTPS avec id/auth.
+- Génération des requêtes CURL prenant en compte la spécificité de mon programme HTTPS avec id/auth.
 
 ### SAV
 
