@@ -1,5 +1,5 @@
 Mise en place du serveur :
-==============================
+===========================
 
 ### CONFIGURATION de l'EC2 et du S3 :
 
@@ -11,25 +11,25 @@ Les enregistrer et les garder à l'abris des regards.
 S3 Bucket :
 
 Via interface graphique AWS : 
-	- Je crée un bucket : 'stockagefbsdpfilrougealan' sans accès public
-	- Je crée deux sous-dossiers : 'Sauvegarde' et 'StockageJSON'
-	- Je modifie les permissions pour l'accès : je mets tout à oui pour moi.
-	- Je modifie le management pour la lifecyle : pour tous les objets sur 365 jours
+- Je crée un bucket : 'stockagefbsdpfilrougealan' sans accès public
+- Je crée deux sous-dossiers : 'Sauvegarde' et 'StockageJSON'
+- Je modifie les permissions pour l'accès : je mets tout à oui pour moi.
+- Je modifie le management pour la lifecyle : pour tous les objets sur 365 jours
 
 EC2 Instance :
 
 Via interface graphique AWS :
-	- Je crée une instance EC2 avec : t2.micro, FreeBSD 11.3-STABLE-amd64-2020-02-20 (ami-007d81b0b99039d99), 1 instance
-	- Je télécharge une clé de connexion : keyPFilRougeAlan.pem, je la stocke sur l'ordinateur local, je la rends exécutable 'chmod 400 keyPFilRougeAlan.pem'
-	- J'édite le filtre : HTTPS, HTTP et SSH sur toutes les adresses IP
+- Je crée une instance EC2 avec : t2.micro, FreeBSD 11.3-STABLE-amd64-2020-02-20 (ami-007d81b0b99039d99), 1 instance
+- Je télécharge une clé de connexion : keyPFilRougeAlan.pem, je la stocke sur l'ordinateur local, je la rends exécutable 'chmod 400 keyPFilRougeAlan.pem'
+- J'édite le filtre : HTTPS, HTTP et SSH sur toutes les adresses IP
 
 Policy :
 
 Via interface graphique AWS :
-	- Je crée une policy permettant l'accès à toutes les actions et ressources pour S3 et Rekognition
+- Je crée une policy permettant l'accès à toutes les actions et ressources pour S3 et Rekognition
 
 Via RosettaHub :
-	- J'autorise Rekognition sur Allowance
+- J'autorise Rekognition sur Allowance
 
 Automatisation :
 
@@ -46,14 +46,14 @@ aws ec2 run-instances --image-id ami-007d81b0b99039d99 --count 1 --instance-type
 ````
 
 Je récupère ensuite les adresses IP de mon instance (trouvées uniquement sur l'interface graphique AWS)
-	private IP : 172.31.5.59
-	public IP : 54.246.242.159
-
+```
+private IP : 172.31.5.59
+public IP : 54.246.242.159
+```
 
 ### CONFIGURATION de l'OS :
 
-Connexion ssh : 
-- Je me connecte en SSH : 
+Je me connecte en SSH : 
 ```
 ssh -i ~/Desktop/PFR/keyPFilRougeAlan.pem ec2-user@54.246.242.159
 ```

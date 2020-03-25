@@ -1,9 +1,8 @@
 #!/bin/bash
 
-pip install flask
-pip install boto3
-pip install botocore
-pkg install docker
-pip freeze > requirements.txt
+pkg install npm
+npm init -f
+npm install --save-dev serverless-wsgi serverless-python-requirements
+virtualenv venv --python=python3
 
-# Puis : sls deploy
+# Puis : source venv/bin/activate.csh

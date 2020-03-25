@@ -40,9 +40,9 @@ Fichier de test
 
 .. code-block:: bash
 
-	curl -X POST "http://54.246.242.159:8000/rekognition" -F "data_file=@~FilRouge/Testeurs/Ville.jpg" > Ville_from_JPEG_to_JSON.json
+	curl -X POST "http://@IPv4:8000/rekognition" -F "data_file=@~FilRouge/Testeurs/Ville.jpg" > Ville_from_JPEG_to_JSON.json
 
-Afin de tester le serverless, je vous propose de tester cette commande vous permettant d'obtenir l'ensemble des informations que peut traiter le programme.
+Afin de tester le serverless, je vous propose de tester cette commande vous permettant d'obtenir l'ensemble des informations que peut traiter le programme. (mise à jour de l'adresse IP avant exécution)
 Il sera peut-être nécessaire de corriger à la marge le chemin d'accès au fichier de test.
 
 .. _IAASMETA:
