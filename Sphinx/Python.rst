@@ -203,4 +203,4 @@ La gestion des métadonnées va dépendre principalement de l'extension du fichi
 Code source de l'application
 =============================
 
-Vous trouverez en lien le code-source de l'application. :ref:`Code`<Code source>
+Vous trouverez en lien le code-source de l'application. Code_

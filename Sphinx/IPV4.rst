@@ -36,11 +36,9 @@ Accès à l'instance
 
 Afin de vous connecter à l'instance :
 
-.. code-block:: sh
+.. code-block:: bash
 
 	ssh ec2-user@54.246.242.159
-
-Vous y trouverez un fichier ReadMe vous permettant d'accéder à l'utilisateur 'Root'
 
 .. _IPV4AWS:
 Infrastructure du serveur

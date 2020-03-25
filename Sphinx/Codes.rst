@@ -4,43 +4,43 @@ Module Code : Codes sources
 ****************************
 
 .. _CodePYTAUT:
-Module Auth :
+Module Auth
 ~~~~~~~~~~~~~~
 .. literalinclude:: ../Flask/functions/auth.py
 
 .. _CodePYTAWS:
-Module AWS :
+Module AWS
 ~~~~~~~~~~~~~
 .. literalinclude:: ../Flask/functions/aws.py
 
 .. _CodePYTEXT:
-Module Extensions :
-~~~~~~~~~~~~~~
+Module Extensions
+~~~~~~~~~~~~~~~~~~~
 .. literalinclude:: ../Flask/functions/extensions.py
 
 .. _CodePYTFAP:
-Module FlaskApp (HTTPS et HTTP) :
+Module FlaskApp (HTTPS et HTTP)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. literalinclude:: ../Flask/functions/flaskapp.py
 
 .. literalinclude:: ../Flask/functions/flaskapp_http.py
 
 .. _CodePYTHSH:
-Module Hash :
-~~~~~~~~~~~~~~
+Module Hash
+~~~~~~~~~~~~~
 .. literalinclude:: ../Flask/functions/hash.py
 
 .. _CodePYTLOG:
-Module Logger :
+Module Logger
 ~~~~~~~~~~~~~~
 .. literalinclude:: ../Flask/functions/logger.py
 
 .. _CodePYTSWG:
-Module Swagger :
-~~~~~~~~~~~~~~
+Module Swagger
+~~~~~~~~~~~~~~~~
 .. literalinclude:: ../Flask/functions/swagger.py
 
 .. _CodePYTTRT:
-Module Traitement :
-~~~~~~~~~~~~~~
+Module Traitement
+~~~~~~~~~~~~~~~~~~~
 .. literalinclude:: ../Flask/functions/traitement.py

@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-#curl -X POST "http://54.246.242.159:8000/rekognition" -F "data_file=@Ville.jpg" > ../../sortie.json
-
 # Importation des librairies FLASK et C°
 from flask import *
 
