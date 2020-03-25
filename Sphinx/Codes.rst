@@ -1,7 +1,7 @@
 .. _Code:
-****************************
-Module Code : Codes sources
-****************************
+***************
+Codes sources
+***************
 
 .. _CodePYTAUT:
 Module Auth
