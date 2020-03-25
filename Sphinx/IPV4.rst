@@ -134,4 +134,4 @@ Protocole HTTP & HTTPS
 
 Vous trouverez l'ensemble des informations relatives à la sécurité de l'application sur la page dédiée à l'IPv6 et la SSI : 
 
-:ref:`Module SSI`
+:ref:`SSI`
