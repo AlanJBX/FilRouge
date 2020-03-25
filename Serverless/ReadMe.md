@@ -28,8 +28,3 @@ Test de l'application
 curl -X POST "http://@IPv4:8000/rekognition" -F "data_file=@~FilRouge/Testeurs/Ville.jpg" > Ville_from_JPEG_to_JSON.json
 ```
 Attention à la mise à jour de l'adresse IP ainsi que le chemin d'accès au fichier test.
-```
-```
-```
-
-```
