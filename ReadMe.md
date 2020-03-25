@@ -42,7 +42,7 @@ https://github.com/AlanJBX/FilRouge/tree/master/Testeurs
 
 ### Briques développées :
 
-IPV4 : 
+IPv4 : 
 * Instance EC2 et bucket S3, oui
 * OS FreeBSD, oui
 * Usage de PacketFilter, oui
@@ -80,6 +80,23 @@ SOA :
 * API Sécurisation, oui
 * API Interconnectée, oui
 * API Documentation, oui
+
+### Améliorations potentielles
+
+IPv4 :
+* Mise en place d'un Packet Filter complète et totale d'un PF au sein de l'instance.
+Python :
+* Augmentation des extensions et métadonnées liées (pour les vidéos notamment)
+* Prise en compte du MIMEType
+* Gestion plus évoluées des erreurs (afin prendre en comptes les codes status)
+* Passage en API RESTfull
+* Mise en place de l'AutoDoc en lien avec les DocStrings rédigées
+SSI :
+* Générateur de mot de passe aléatoire
+AWS / IAAS :
+* Automatisation de la création et de la gestion du bucket à partir d'un programme/script.
+SOA :
+* Génération des requêtes CURL prenant en compte la spécificité de mon programme HTTPS avec id/auth.
 
 ### SAV
 

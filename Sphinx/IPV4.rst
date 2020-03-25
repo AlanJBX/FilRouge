@@ -15,7 +15,7 @@ Le serveur est hébergé via RosettaHub dans le Cloud d'Amazon. Une instance EC2
 Fonctions développées
 -----------------------
 
-.. topic:: IPV4 :
+.. topic:: IPv4 :
 
 	- Instance EC2 et bucket S3, oui
 
