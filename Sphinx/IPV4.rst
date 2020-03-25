@@ -132,4 +132,6 @@ Un point d'amélioration du service serait la mise en place complète et totale 
 Protocole HTTP & HTTPS
 ========================
 
-Vous trouverez l'ensemble des informations relatives à la sécurité de l'application sur la page dédiée à l'IPv6 et la SSI : :ref:`Module SSI`
+Vous trouverez l'ensemble des informations relatives à la sécurité de l'application sur la page dédiée à l'IPv6 et la SSI : 
+
+:ref:`Module SSI`
