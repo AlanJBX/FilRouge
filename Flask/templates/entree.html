@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <meta charset="utf-8" />
+        <center>
+            <head><h1>Bienvenue sur l'application de conversion de fichier en JSON</h1></head>
+            <p> Veuillez vous identifier : </p>
+            <form action="/login" method="post">
+                <input type="username" name="username" placeholder="Nom utilisateur">
+                <input type="password" name="password" placeholder="Mot de passe">
+                <input type="submit" value="Log in">
+            </form>
+            <p> Ou vous enregistrer : </p>
+            <form action="/register" method="post">
+                <input type="submit" value="S'enregistrer">
+            </form>
+            <p> ............... </p>
+            {% for message in get_flashed_messages() %}
+                <p>{{ message }}</p>
+            {% endfor %}
+            <img src="https://www.palombe.com/users/00/00/39/media/20140902195209ziriak10.jpg" alt="" />
+            <p><small>Source : www.palombe.com</small></p>
+        </center>
+    </body>
+</html>

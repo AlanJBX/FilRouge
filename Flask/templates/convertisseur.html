@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <meta charset="utf-8" />
+        <center>
+            <head><h1>Convertisseur de fichier</h1></head>
+            <h4> Transforme un fichier en un fichier JSON au format {métadonnées, fichier_binaire} </h4>
+            <p> Formats acceptés : </p>
+            <p> pdf, jpeg, png, jpg, gif, bmp, txt, py, csv, ods, odt, odg, ipynb, json, docx, doc, xls, tex </p>
+            <form action="/login/home/convert/fichierJSON" method="post" enctype="multipart/form-data">
+                <input type="file" name="data_file" />
+                <input type="submit" />
+            </form>
+            <p> Si votre fichier est corrompu, vous n'obtiendrez pas les métadonnées particulières liés à l'extension du fichier considéré. </p>
+            <p> ............... </p>
+            <form action="/login/home" method="get">
+                <input type="submit" value="Retour">
+            </form>
+            <p> ............... </p>
+            {% for message in get_flashed_messages() %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </center>
+    </body>
+</html>

@@ -1,0 +1,145 @@
+openapi: 3.0.0
+info:
+  description: |
+    API permettant de transformer un fichier lambda en un fichier JSON comportant des métadonnées et le binaire du fichier lambda.
+  version: "1.0.0"
+  title: ConvertToJSON
+  contact:
+    email: alan.joubioux@student-cs.fr
+  license:
+    name: Flask 1.1.1
+    url: 'https://flask.palletsprojects.com/en/1.1.x/'
+servers:
+# Added by API Auto Mocking Plugin
+  - description: adresse IPv4 de l'API
+    url: http://54.246.242.159:8000/home
+tags:
+  - name: Convert
+    description: Conversion du fichier d'origine au fichier binaire enrichi sous format JSON
+  - name: List
+    description: Liste les fichiers JSONifiés disponibles sur le bucket
+  - name: Delete
+    description: Supprime le fichier JSONifié désiré
+  - name: GetIt
+    description: Récupère le fichier JSONifié désiré
+
+paths:
+
+  /convert/fichierJSON:
+    post:
+      tags:
+        - Convert
+      description: Permet de récupérer les métadonnées en fonction de l'extension, de stocker le fichier original et le JSON dans S3 et de retourner le fichier JSON.
+      operationId: JSONify
+      responses:
+        '200':
+          description: Requête traitée avec succès.
+        '400':
+          description: La syntaxe de la requête est erronée.
+        '500':
+          description: Erreur interne du serveur.
+      requestBody:
+        $ref: '#/components/requestBodies/JSONify'
+
+  /s3/list_bucket:
+    get:
+      tags:
+        - List
+      description: Permet de récupérer l'ensemble des fichiers déjà JSONifiés présents sur le bucket.
+      operationId: list_bucket
+      responses:
+        '200':
+          description: Requête traitée avec succès.
+        '400':
+          description: La syntaxe de la requête est erronée.
+        '500':
+          description: Erreur interne du serveur.
+
+
+  /s3/del_file:
+    post:
+      tags:
+        - Delete
+      description: Permet de supprimier un fichier JSONifié présent sur le bucket
+      operationId: del_file
+      responses:
+        '200':
+          description: Requête traitée avec succès.
+        '400':
+          description: La syntaxe de la requête est erronée.
+        '500':
+          description: Erreur interne du serveur.
+      requestBody:
+        $ref: '#/components/requestBodies/del_file'
+
+  /s3/get_file:
+    post:
+      tags:
+        - GetIt
+      description: Permet de récupérer un fichier JSONifié présent sur le bucket
+      operationId: get_file
+      responses:
+        '200':
+          description: Requête traitée avec succès.
+        '400':
+          description: La syntaxe de la requête est erronée.
+        '500':
+          description: Erreur interne du serveur.
+      requestBody:
+        $ref: '#/components/requestBodies/get_file'
+
+externalDocs:
+  description: Code source et documentation
+  url: https://github.com/AlanJBX/FilRouge
+  
+components:     
+  parameters:
+    data_file:
+      name: data_file
+      in: path
+      description: Nom du fichier à tester
+      required: true
+      schema:
+        type: string
+
+  requestBodies:
+    JSONify:
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              data_file:
+                type: file
+      description: Nom du fichier à JSONifier
+      required: true
+
+    del_file:
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              file_del:
+                type: string
+      description: Nom du fichier JSONifiés à supprimer du bucket
+      required: true
+
+    get_file:
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              file_get:
+                type: string
+      description: Nom du fichier JSONifiés à récupérer du bucket
+      required: true
+                
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+      
+security:
+  - BasicAuth: []

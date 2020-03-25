@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <meta charset="utf-8" />
+        <center>
+            <head><h1>Ajout d'un nouvel utilisateur</h1></head>
+            <p> <b>Identifiant</b> : entre 3 et 10 caractères </p>
+            <p> <b>Mot de passe</b> : entre 5 et 15 caractères </p>
+            <p> <b>Mail</b> : au format nom@domaine.ext </p>
+            <form action="/register/add_user" method="post">
+                <input type="new_username" name="new_username" placeholder="Nom utilisateur">
+                <input type="new_password" name="new_password" placeholder="Mot de passe">
+                <input type="new_email" name="new_email" placeholder="Adresse Email">
+                <p> </p>
+                <input type="submit" value="S'enregistrer">
+            </form>
+            <p> ............... </p>
+            <form action="/logout" method="post">
+                <input type="submit" value="Retour">
+            </form>
+            <p> ............... </p>
+            {% for message in get_flashed_messages() %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </center>
+    </body>
+</html>

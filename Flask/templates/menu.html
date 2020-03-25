@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <meta charset="utf-8" />
+        <center>
+            <head><h1>Menu : </h1></head>
+            <h4> Convertir un fichier :</h4>
+            <p> Transforme un fichier en un fichier JSON au format {métadonnées, fichier_binaire}.</p>
+            <form action="/login/home/convert" method="post">
+                <input type="submit" value="Convertisseur de fichier">
+            </form>
+            <h4> Lister les fichiers disponibles :</h4>
+            <p> Liste les fichiers JSON disponibles sur le bucket.</p>
+            <form action="/login/home/s3/list_bucket" method="get">
+                <input type="submit" value="Lister les fichier sur le bucket">
+            </form>
+            <h4> Supprimer un fichier JSON présent sur le bucket :</h4>
+            <p> Supprime le fichier désiré du bucket. <i>(réservé aux admins)</i> </p>
+            <form action="/login/home/s3/del_file" method="post">
+                <input type="file_del" name="file_del" placeholder="Fichier à supprimer">
+                <input type="submit" value="Supprimer">
+            </form>
+            <h4> Récupérer un fichier JSON présent sur le bucket :</h4>
+            <p> Récupère le fichier désiré du bucket. <i>(réservé aux admins)</i> </p>
+            <form action="/login/home/s3/get_file" method="post">
+                <input type="file_get" name="file_get" placeholder="Fichier à télécharger">
+                <input type="submit" value="Télécharger">
+            </form>
+            <p> ............... </p>
+            <form action="/logout" method="post">
+                <input type="submit" value="Se déconnecter">
+            </form>
+            <p> ............... </p>
+            {% for message in get_flashed_messages() %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </center>
+    </body>
+</html>
