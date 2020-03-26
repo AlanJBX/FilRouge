@@ -63,6 +63,28 @@ Un bucket S3 a été déployé manuellement via le navigateur Web pour le stocka
 
 Un point d'amélioration serait l'automatisation de la création et de la gestion du bucket à partir d'un programme/script.
 
+En théorie, la suppression des données est fixée à 365 jours.
+
+.. code-block:: YAML
+
+    Resources:
+      TestBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: stockagefbsdpfilrougealan
+        AccessControl: Private
+        LifecycleConfiguration:
+          Rules:
+          - Id: DeleteContentAfter365Days
+            Prefix: ''
+            Status: 'Enabled'
+            ExpirationInDays: 365
+
+De manière pratique, une suppression des données a été fixée à 365 jours via le navigateur.
+
+.. image:: IMG/S3.png
+   :align: center
+
 .. _IAASREKO:
 AWS Rekognition
 ================

@@ -92,7 +92,9 @@ Malgré la présence d'un packet filter disponible via la gestion AWS de l'insta
 
 .. code-block:: sh
 
+	# Adresse IP instance EC2
 	ip_ext="54.246.242.159"
+	# Adresse IP ordinateur Mac MS-SIO
 	ip_sio="138.195.237.216"
 
 	webports = "{http, https}"
@@ -125,6 +127,9 @@ Malgré la présence d'un packet filter disponible via la gestion AWS de l'insta
 	#_EOT_#
 
 Néanmoins, par précaution et afin de pouvoir accéder à l'instance depuis différents ordinateurs, il n'a pas été activé de manière permanente. Seul le PF d'AWS est activé.
+
+.. image:: IMG/VPC.png
+   :align: center
 
 Un point d'amélioration du service serait la mise en place complète et totale d'un PF au sein de l'instance.
 

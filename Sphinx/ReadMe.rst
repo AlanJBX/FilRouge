@@ -118,8 +118,19 @@ Briques développées :
 
 	- API Documentation, oui
 
+Difficultés rencontrées
+++++++++++++++++++++++++
+
+De petites difficultés ont rencontrées sur l'ensemble du projet et sur l'ensembl des briques développées. Elles ont été de deux natures différentes :
+
+- **Automatisation** : afin d'avoir un code propre et facilement debuggable, j'ai tenté d'automatisé le plus possible de chose. Il reste néanmoins de nombreuses choses à effectuer. Cette difficulté a eu pour principal effet de me faire perdre beaucoup de temps pour des gains marginaux.
+
+- **Spécificité et compatibilités** : afin de faire correspondre mon idée de mon programme aux capacités de chaque technologie, il m'a fallut chercher les méthodes spécifiques à chacune d'entre elle. Cette difficulté a eu pour effet principal de rendre le code plus efficace et de me faire montée en compétence.
+
+
 Améliorations potentielles
 ++++++++++++++++++++++++++
+
 IPv4 :
 
 - Mise en place d'un Packet Filter complète et totale d'un PF au sein de l'instance.
