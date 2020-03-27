@@ -28,7 +28,7 @@ Mini programme de hash, hash.py
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. literalinclude:: ../Flask/functions/hash.py
 
-Gestion des logs~, logger.py
+Gestion des logs, logger.py
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. literalinclude:: ../Flask/functions/logger.py
 
