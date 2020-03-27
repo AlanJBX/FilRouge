@@ -79,7 +79,6 @@ pkg install py37-redis
 pkg install py37-lxml
 pkg install openssl
 pkg install vim
-pkg install git
 pip install -r ./IP/requirements.txt
 ```
 

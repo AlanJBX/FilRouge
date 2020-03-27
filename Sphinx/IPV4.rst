@@ -133,4 +133,4 @@ Protocole HTTP & HTTPS
 
 Vous trouverez l'ensemble des informations relatives à la sécurité de l'application sur la page dédiée à la SSI_.
 
-.. _SSI: https://pfralanjbx.readthedocs.io/fr/latest/SSI.html
+.. _SSI: https://pfralanjbx.readthedocs.io/SSI.html

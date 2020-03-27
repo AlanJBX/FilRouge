@@ -74,11 +74,11 @@ API interconnectée
 
 L'application développée est connectée au Bucket S3 d'Amazon et appelle l'API Rekognition AWS. Plus d'informations : Rekognition_.
 
-.. _Rekognition : https://pfralanjbx.readthedocs.io/fr/latest/IAAS.html#aws-rekognition
+.. _Rekognition : https://pfralanjbx.readthedocs.io/IAAS.html#aws-rekognition
 
 Documentation
 ==============
 
 La documentation de l'application est constituée du présent document (principalement la partie Python_ ) ainsi que la page swagger de l'application 'http://54.246.242.159:8000/swagger/'
 
-.. _Python : https://pfralanjbx.readthedocs.io/fr/latest/Python.html
+.. _Python : https://pfralanjbx.readthedocs.io/Python.html

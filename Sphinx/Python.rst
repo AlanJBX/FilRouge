@@ -75,31 +75,31 @@ Modules développés
 ~~~~~~~~~~~~~~~~~~~
 
 * Module Auth_ : permet de gérer les authentifications/identifications, l'ajout d'un nouvel utilisateur
-.. _Auth : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#identification-et-authentification-auth-py
+.. _Auth : https://pfralanjbx.readthedocs.io/Codes.html#identification-et-authentification-auth-py
 
 * Module AWS_ : permet de gérer les appels vers et depuis le Bucket S3 ainsi que l'API Rekognition
-.. _AWS : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#gestion-des-buckets-et-api-aws-py
+.. _AWS : https://pfralanjbx.readthedocs.io/Codes.html#gestion-des-buckets-et-api-aws-py
 
 * Module Extensions_ : permet de tester l'extension du fichier pris en compte et de retourner les métadonnées particulères liées
-.. _Extensions : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#gestion-des-extensions-de-fichier-extensions-py
+.. _Extensions : https://pfralanjbx.readthedocs.io/Codes.html#gestion-des-extensions-de-fichier-extensions-py
 
 * Module FlaskApp_ : permet de gérer les pages WEB du serveur HTTP(S) de l'application et de faire du micro traitement de fichier
-.. _FlaskApp : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#moteur-web-flask-pour-http-et-https-flaskapp-py-et-flaskapp-http-py
+.. _FlaskApp : https://pfralanjbx.readthedocs.io/Codes.html#moteur-web-flask-pour-http-et-https-flaskapp-py-et-flaskapp-http-py
 
 * Module Hash_ : mini programme permettant de traiter de hasher des mots de passe
-.. _Hash : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#mini-programme-de-hash-hash-py
+.. _Hash : https://pfralanjbx.readthedocs.io/Codes.html#mini-programme-de-hash-hash-py
 
 * Module Logger_ : permet de traiter les LOG
-.. _Logger : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#gestion-des-logs-logger-py
+.. _Logger : https://pfralanjbx.readthedocs.io/Codes.html#gestion-des-logs-logger-py
 
 * Module Swagger_ : permet d'appeler le module SWAGGER pour la génération de la documentation
-.. _Swagger : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#generateur-swagger-swagger-py
+.. _Swagger : https://pfralanjbx.readthedocs.io/Codes.html#generateur-swagger-swagger-py
 
 * Module Traitement_ : permet de traiter la conversion du fichier d'origine en version JSONifié
-.. _Traitement : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#traitement-des-fichier-a-convertir-traitement-py
+.. _Traitement : https://pfralanjbx.readthedocs.io/Codes.html#traitement-des-fichier-a-convertir-traitement-py
 
 * Module Serverless_ : permet de gérer l'application en version serverless
-.. _Serverless : https://pfralanjbx.readthedocs.io/fr/latest/IAAS.html#code-serverless
+.. _Serverless : https://pfralanjbx.readthedocs.io/IAAS.html#code-serverless
 
 Application au format RESTFull
 ===============================
@@ -192,7 +192,7 @@ La gestion des métadonnées va dépendre principalement de l'extension du fichi
 	
 	Si l'image correspond à une extension donnée et une taille minimum, elle est envoyée à l'API Amazon Rekognition qui est chargée de déterminer les éléments présents dans l'image. Les métadonnées déterminées sont alors ajoutées au fichier JSON. Plus d'informations : Rekognition_.
 
-	.. _Rekognition : https://pfralanjbx.readthedocs.io/fr/latest/IAAS.html#aws-rekognition
+	.. _Rekognition : https://pfralanjbx.readthedocs.io/IAAS.html#aws-rekognition
 
 
 .. topic:: Gestion des pdf
@@ -211,4 +211,4 @@ Code source de l'application
 
 Vous trouverez en lien le codesource_ de l'application.
 
-.. _codesource : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html
+.. _codesource : https://pfralanjbx.readthedocs.io/Codes.html
