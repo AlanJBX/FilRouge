@@ -36,6 +36,6 @@ Générateur Swagger, swagger.py
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. literalinclude:: ../Flask/functions/swagger.py
 
-Appel d'une autre API, viaCurl.py
+Appel vers une autre API, viaCurl.py
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. literalinclude:: ../Flask/functions/viaCurl.py
