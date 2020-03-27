@@ -2,6 +2,7 @@ openapi: 3.0.0
 info:
   description: |
     API permettant de transformer un fichier lambda en un fichier JSON comportant des métadonnées et le binaire du fichier lambda.
+    Extensions prises en comptes : pdf, jpeg, png, jpg, gif, bmp, txt, py, csv, ods, odt, odg, ipynb, json, docx, doc, xls, tex
   version: "1.0.0"
   title: ConvertToJSON
   contact:

@@ -1,9 +1,7 @@
-.. _SSI:
 ************************
 `Module SSI`_
 ************************
 
-.. _SSIINTRO:
 Introduction
 =============
 
@@ -26,7 +24,6 @@ Fonctions développées
 
 	- Gestion d'un nouvel utilisateur, oui
 
-.. _SSIHTTPS:
 HTTPS
 ======
 
@@ -38,7 +35,6 @@ Vous trouverez ci-dessous le certificait utilisé :
 .. image:: IMG/cert.png
    :align: center
 
-.. _SSIAUTH:
 Authentification
 =================
 

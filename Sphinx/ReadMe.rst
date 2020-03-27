@@ -26,6 +26,8 @@ Vous trouverez les quatres fonctionnalités suivantes :
 
 - Récupération d'un fichier : récupère un fichier JSONifié donné du bucket de stockage
 
+La différence entre la version HTTPS et HTTP, en plus d'être la présence ou non d'un certificat, est que la version HTTPS est plus 'lourde' d'utilisation avec un système de log plus précis et un système d'authentification complet. L'intéret de la version 'HTTP' a été de permettre de développer certains POC qui ont par la suite été mis en place dans le HTTPS.
+
 Afin d'accéder à l'ensemble de la documentation de ce projet, vous pouvez soit lire le PDF présent à la racine du repository ou vous rendre sur le lien suivant :
 
 .. centered:: https://PFRAlanJBX.readthedocs.io/

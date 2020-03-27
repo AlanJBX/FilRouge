@@ -155,6 +155,10 @@ Exemple :
             "Zebra Crossing"}
     }
 
+L'autorisation de connexion s'effectuer en deux temps :
+* Vérification des AWS Credentials Keys
+* Vérification de l'autorisation temporaire délivrée par Rosetta
+
 Code Serverless
 ================
 
