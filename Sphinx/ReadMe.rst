@@ -92,7 +92,7 @@ Briques développées :
 
 .. topic:: AWS / IAAS :
 
-	- Serverless, oui
+	- Serverless, en partie
 
 	- Gestion des métadonnées, oui
 
@@ -153,6 +153,7 @@ SSI :
 
 AWS / IAAS :
 
+- Mise en place complète de ServerLess
 - Automatisation de la création et de la gestion du bucket à partir d'un programme/script.
 
 SOA :

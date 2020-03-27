@@ -29,7 +29,7 @@ def upload_file(entry_file, bucket, output_s3_file):
         #######################################
         print("# Télé..", end='')
         #######################################
-        s3.upload_file(entry_file, bucket, output_s3_file)
+        s3.upload_fileobj(entry_file, bucket, output_s3_file)
         #######################################
         print(".chargement réussi #")
         #######################################
@@ -49,8 +49,8 @@ def download_file(output_file, bucket, input_s3_file):
     :type bucket: string
     :param input_s3_file: nom du fichier à télécharger
     :type input_s3_file: string
-    :return: le fichier à télécharger deuis le bucket
-    :rtype: [bool, file]
+    :return: le fichier à télécharger depuis le bucket
+    :rtype: file
     """
     #######################################
     print("# Début de téléchargement depuis le bucket #")
@@ -60,17 +60,13 @@ def download_file(output_file, bucket, input_s3_file):
 
         s3 = boto3.client('s3')
         
-        s3.download_file(bucket, input_s3_file, output_file)
-        file = str(open(output_file,'rb').read())
+        file_return = s3.download_file(bucket, input_s3_file, output_file)
 
         #######################################
         print("# Transfert du fichier depuis le bucket validé # ")
         #######################################        
 
-        return_file = {}
-        return_file["success"] = True
-        return_file["file"] = file
-        return return_file
+        return file_return
 
     except Exception as err:
 
@@ -78,10 +74,7 @@ def download_file(output_file, bucket, input_s3_file):
         print("Erreur dans le transfert du fichier depuis le bucket | " + str(err))
         #######################################    
 
-        return_file = {}
-        return_file["success"] = False
-        return_file["file"] = err
-        return return_file
+        return "Erreur dans le transfert du fichier depuis le bucket | " + str(err)
 
 def detect_labels(image):
     """

@@ -1,9 +1,7 @@
-.. _Python:
 ***************
 Module Python
 ***************
 
-.. _PythonINTRO:
 Introduction
 =============
 
@@ -65,7 +63,7 @@ Il serait envisageable d'effectuer les améliorations suivantes :
 * Passage en API RESTfull
 * Mise en place de l'AutoDoc en lien avec les DocStrings rédigées
 
-.. _PythonFLASK:
+
 Programmation sous Python et Flask
 ===================================
 
@@ -76,23 +74,33 @@ Python est en charge du traitement du fichier tandis que Flask est en charge du 
 Modules développés
 ~~~~~~~~~~~~~~~~~~~
 
-* Module Auth : permet de gérer les authentifications/identifications, l'ajout d'un nouvel utilisateur :doc:`CodePYTAUT`
+* Module Auth_ : permet de gérer les authentifications/identifications, l'ajout d'un nouvel utilisateur
+.. _Auth : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#identification-et-authentification-auth-py
 
-* Module AWS : permet de gérer les appels vers et depuis le Bucket S3 ainsi que l'API Rekognition :ref: `CodePYTAWS`
+* Module AWS_ : permet de gérer les appels vers et depuis le Bucket S3 ainsi que l'API Rekognition
+.. _AWS : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#gestion-des-buckets-et-api-aws-py
 
-* Module Extensions : permet de tester l'extension du fichier pris en compte et de retourner les métadonnées particulères liées :ref:`CodePYTEXT`
+* Module Extensions_ : permet de tester l'extension du fichier pris en compte et de retourner les métadonnées particulères liées
+.. _Extensions : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#gestion-des-extensions-de-fichier-extensions-py
 
-* Module FlaskApp : permet de gérer les pages WEB du serveur HTTP(S) de l'application et de faire du micro traitement de fichier :ref:`CodePYTFAP`
+* Module FlaskApp_ : permet de gérer les pages WEB du serveur HTTP(S) de l'application et de faire du micro traitement de fichier
+.. _FlaskApp : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#moteur-web-flask-pour-http-et-https-flaskapp-py-et-flaskapp-http-py
 
-* Module Hash : mini programme permettant de traiter de hasher des mots de passe :ref:`CodePYTHSH`
+* Module Hash_ : mini programme permettant de traiter de hasher des mots de passe
+.. _Hash : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#mini-programme-de-hash-hash-py
 
-* Module Logger : permet de traiter les LOG :ref:`CodePYTLOG`
+* Module Logger_ : permet de traiter les LOG
+.. _Logger : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#gestion-des-logs-logger-py
 
-* Module Swagger : permet d'appeler le module SWAGGER pour la génération de la documentation :ref:`CodePYTSWG`
+* Module Swagger_ : permet d'appeler le module SWAGGER pour la génération de la documentation
+.. _Swagger : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#generateur-swagger-swagger-py
 
-* Module Traitement : permet de traiter la conversion du fichier d'origine en version JSONifié :ref:`CodePYTTRT`
+* Module Traitement_ : permet de traiter la conversion du fichier d'origine en version JSONifié
+.. _Traitement : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html#traitement-des-fichier-a-convertir-traitement-py
 
-.. _PythonREST:
+* Module Serverless_ : permet de gérer l'application en version serverless
+.. _Serverless : https://pfralanjbx.readthedocs.io/fr/latest/IAAS.html#code-serverless
+
 Application au format RESTFull
 ===============================
 
@@ -107,7 +115,7 @@ L'application est développée afin de correspondre qu'en partie aux propriété
 * **Liens entre les ressources** : non mis en oeuvre
 * **Paramètre comme jeton d’authentification** : non mis en oeuvre
 
-.. _PythonJSON:
+
 Restitution d'un fichier sous format JSON
 ==========================================
 
@@ -145,20 +153,19 @@ Le fichier JSON retourné a alors la structure suivante :
 	    "fichier_bytes": "binaire"
 	}
 
-.. _PythonEXT:
+
 Gestion des extensions
 =======================
 
-La gestion des extensions s'est révélée relativement basique. Le stockage du fichier en JSON se faisant sur la base d'une lecture binaire de ce dernier, la limite d'utilisation du programme est sa capacité à gérer les métadonnées générales :ref: `PythonGNR`
+La gestion des extensions s'est révélée relativement basique. Le stockage du fichier en JSON se faisant sur la base d'une lecture binaire de ce dernier, la limite d'utilisation du programme est sa capacité à gérer les métadonnées générales.
 
 Le choix a été fait de traiter les extensions depuis leur nom que depuis leur MIMIType pour une plus grande flexibilité de traitement.
 
 Les améliorations possibles du programme seraient d'augmenter la liste des extensions disponibles et un traitement à partir du MIMEType.
 
-Le choix arbitraire de ne pas traiter les formats vidéos a été fait car il correspond de manière similaire à la gestion des images :ref: `PythonIMG`
+Le choix arbitraire de ne pas traiter les formats vidéos a été fait car il correspond de manière similaire à la gestion des images.
 
 
-.. _PythonMETA:
 Gestion des métadonnées
 ========================
 
@@ -167,7 +174,6 @@ La gestion des métadonnées va dépendre principalement de l'extension du fichi
 	* Les PDF
 	* Les autres format
 
-.. _PythonGNR:
 .. topic:: Gestion des métadonnées générales
 
 	Les métadonnées suivantes sont générées pour l'ensemble des extensions prises en compte.
@@ -176,19 +182,19 @@ La gestion des métadonnées va dépendre principalement de l'extension du fichi
 		- taile du fichier
 		- nom de l'extension
 
-.. _PythonIMG:
 .. topic:: Gestion des images (.jpeg, .png, .jpg, .gif, .bmp)
 
 	Les librairies utilisées pour extraire les métadonnées des images sont : 
 		- Pillow : permet d'ouvrir l'image en tant qu'une image et non comme un fichier *lambda*
 		- Exif : permet d'extraire les métadonnées si elles sont présentes. La nature principale de ces métadonnées coorespond au caractéristique de l'appareil photo ayant pris la photo.
 
-.. _PythonAWS:
 .. topic:: AWS Rekognition
 	
-	Si l'image correspond à une extension donnée et une taille minimum, elle est envoyée à l'API Amazon Rekognition qui est chargée de déterminer les éléments présents dans l'image. Les métadonnées déterminées sont alors ajoutées au fichier JSON. Plus d'informations : :ref: `_IAAS_REKO`
+	Si l'image correspond à une extension donnée et une taille minimum, elle est envoyée à l'API Amazon Rekognition qui est chargée de déterminer les éléments présents dans l'image. Les métadonnées déterminées sont alors ajoutées au fichier JSON. Plus d'informations : Rekognition_.
 
-.. _PythonPDF:
+	.. _Rekognition : https://pfralanjbx.readthedocs.io/fr/latest/IAAS.html#aws-rekognition
+
+
 .. topic:: Gestion des pdf
 
 	La lecture des métadonnées des PDF s'appuie sur la librairie PyPDF2. Cette librairie permet d'obtenir les informations de quatre natures différentes :
@@ -199,8 +205,10 @@ La gestion des métadonnées va dépendre principalement de l'extension du fichi
 
 	Vous trouverez toutes les informations disponibles au lien suivant : 'https://pythonhosted.org/PyPDF2/Other%20Classes.html'
 
-.. _PythonCODE:
+
 Code source de l'application
 =============================
 
-Vous trouverez en lien le code-source de l'application. `Codes sources`_
+Vous trouverez en lien le codesource_ de l'application.
+
+.. _codesource : https://pfralanjbx.readthedocs.io/fr/latest/Codes.html

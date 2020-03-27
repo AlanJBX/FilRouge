@@ -1,9 +1,7 @@
-.. _IAAS:
 ************************
 Module IAAS
 ************************
 
-.. _IAASINTRO:
 Introduction
 =============
 
@@ -16,7 +14,7 @@ Fonctions développées
 
 .. topic:: AWS / IAAS :
 
-	- Serverless, oui
+	- Serverless, en partie
 
 	- Gestion des métadonnées, oui
 
@@ -29,23 +27,30 @@ Fonctions développées
 Mise en oeuvre
 ~~~~~~~~~~~~~~~
 
-.. _IAASSLS:
 Serveless
 ==========
 
+La mise en place de ServerLess s'effectue via un environnement virtuel décrit dans la partie Serverless du Git.
+'https://github.com/AlanJBX/FilRouge/tree/master/Serverless'
 
-.. _IAASTST:
+La partie implémentation du server et la partie code de l'application se trouvent à la fin de ce chapitre_.
+
+.. _chapitre : https://pfralanjbx.readthedocs.io/fr/latest/IAAS.html#code-serverless
+
+Si les deux parties fonctionnent indépendamment, un problème n'a pu être entièrement résolu. En effet, lors du traitement du fichier envoyé lors de la requête *CURL*, ce dernier n'est pas pris en compte par l'application directement. Il est nécessaire de sauvegarder localement le fichier avant de pouvoir le traiter correctement. Cependant, le serverless n'accepte pas cette sauvegarde locale.
+
+J'ai donc implémenté le code différemment de l'application Flask pur afin de travailler avec un objet stocké puis récupéré sur le bucket S3. Si ce code fonctionne indépendamment, je n'ai pas pu le tester via la version Serverless.
+
 Fichier de test
 ================
 
 .. code-block:: bash
 
-	curl -X POST "http://@IPv4:8000/rekognition" -F "data_file=@~FilRouge/Testeurs/Ville.jpg" > Ville_from_JPEG_to_JSON.json
+	curl -X POST "http://54.246.242.159:8000/rekognition" -F "data_file=@~/FilRouge/Testeurs/Ville.jpg" > Ville_from_JPEG_to_JSON.json
 
 Afin de tester le serverless, je vous propose de tester cette commande vous permettant d'obtenir l'ensemble des informations que peut traiter le programme. (mise à jour de l'adresse IP avant exécution)
-Il sera peut-être nécessaire de corriger à la marge le chemin d'accès au fichier de test.
+Il sera nécessaire de corriger l'adresse IP et peut-être nécessaire de corriger à la marge le chemin d'accès au fichier de test.
 
-.. _IAASMETA:
 Métadonnées
 ============
 
@@ -53,9 +58,8 @@ Les métadonnées récoltées sont de deux origines :
 
 * métadonnées générales : nom du fichier, MIMEType du fichier et taille du fichier
 
-* métadonnées particulières : objets détectés par l'API rekognition :ref:`IAASREKO`
+* métadonnées particulières : objets détectés par l'API rekognition, voir la partie AWS Rekognition
 
-.. _IAASS3:
 AWS Bucket S3
 ==============
 
@@ -85,7 +89,6 @@ De manière pratique, une suppression des données a été fixée à 365 jours v
 .. image:: IMG/S3.png
    :align: center
 
-.. _IAASREKO:
 AWS Rekognition
 ================
 
@@ -152,5 +155,11 @@ Exemple :
             "Zebra Crossing"}
     }
 
-:ref: `_PythonAWS`
-:ref: `_PythonCODE`
+Code Serverless
+================
+
+.. literalinclude:: ../Serverless/serverless.yml
+
+.. literalinclude:: ../Serverless/app.py
+
+.. literalinclude:: ../Serverless/aws.py

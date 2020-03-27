@@ -66,7 +66,7 @@ SSI :
 * Gestion d'un nouvel utilisateur, oui
 
 AWS / IAAS :
-* Serverless, oui
+* Serverless, en partie
 * Gestion des métadonnées, oui
 * Utilisation d'un bucket S3, oui
 * Fichier test et commande de requête, oui
@@ -103,6 +103,7 @@ SSI :
 - Générateur de mot de passe aléatoire
 
 AWS / IAAS :
+- Mise en place complète de ServerLess
 - Automatisation de la création et de la gestion du bucket à partir d'un programme/script.
 
 SOA :

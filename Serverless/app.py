@@ -29,8 +29,6 @@ def uploadFichier():
         fichier = request.files['data_file']
         typeFichier = fichier.content_type
 
-        print(type(fichier))
-
         if typeFichier in extension:
 
             #######################################
@@ -38,24 +36,23 @@ def uploadFichier():
             #######################################
 
             nomSauvegarde = str(datetime.now()) + '__' + fichier.filename
-            fichier.save(os.path.join('./', nomSauvegarde))
-            cheminSauvegarde = './' + nomSauvegarde
-
-            upload_file(cheminSauvegarde, bucket_perso, 'Sauvegarde/'+nomSauvegarde)
+            datafile = filetodisplay.read()
+            file =  BytesIO(datafile)
+            upload_file(file, bucket_perso, 'Sauvegarde/'+nomSauvegarde)
 
             #######################################
             print("# Récupération depuis S3 du fichier REQUEST pour travail #")
             #######################################
 
-            #download_file(cheminSauvegarde, bucket_perso, 'Sauvegarde/'+nomSauvegarde)
+            output_file = download_file('fichier', bucket_perso, 'Sauvegarde/'+nomSauvegarde)
 
             #######################################
             print("# Métadonnées Générales #")
             #######################################
 
             nom_fichier = fichier.filename
-            contenu = str(fichier.read())
-            taillefichier = os.stat(cheminSauvegarde).st_size
+            contenu = str(open(output_file,'rb').read())
+            taillefichier = os.stat(output_file).st_size
             # + type_fichier
 
             #######################################
@@ -64,7 +61,7 @@ def uploadFichier():
 
             try:
                 if taillefichier < 5242880:
-                    rekognition = detect_labels(cheminSauvegarde)
+                    rekognition = detect_labels(output_file)
                 else:
                     rekognition = "Taille trop grande pour API Rekognition"
 
@@ -83,21 +80,11 @@ def uploadFichier():
             donneesJSON["META"]["taille_fichier"] = taillefichier
             donneesJSON["META"]["labels_rekognition"] = rekognition
 
-            objet = open(cheminSauvegarde,'rb')
-            donneesJSON["fichier_bytes"] = str(objet.read())
-            objet.close()
-            
+            donneesJSON["fichier_bytes"] = contenu
 
-            fichierNomJSON = nomSauvegarde + '_to_JSON.json'
+            donnees = json.dump(donneesJSON, tmp, indent=4)
 
-            print(donneesJSON["META"])
-
-            with open("file_send", 'w') as tmp:
-                json.dump(donneesJSON, tmp, indent=4)
-
-            os.remove(cheminSauvegarde)
-
-            return send_file("./file_send", as_attachment = True, attachment_filename = fichierNomJSON)
+            return donnees
         else:
             return "L'API n'autorise que les fichiers de type gif, jpeg, jpg ou png."
     else:

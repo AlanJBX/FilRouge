@@ -1,9 +1,7 @@
-.. _IPV4:
 *************
 Module IPv4
 *************
 
-.. _IPV4INTRO:
 Introduction
 =============
 
@@ -40,7 +38,6 @@ Afin de vous connecter à l'instance :
 
 	ssh ec2-user@54.246.242.159
 
-.. _IPV4AWS:
 Infrastructure du serveur
 ===========================
 
@@ -56,7 +53,6 @@ stockagefbsdpfilrougealan
 
 * une instance EC2 AWS sous FreeBSD 11.3-STABLE-amd64-2020-02-20.
 
-.. _IPV4ACS:
 Accès au service
 ==================
 
@@ -84,7 +80,6 @@ Afin de gérer le serveur, deux connexions SSH sont disponibles :
 	
 	ssh ec2-user@54.246.242.159
 
-.. _IPV4PFL:
 Packet Filter
 ===============
 
@@ -133,10 +128,9 @@ Néanmoins, par précaution et afin de pouvoir accéder à l'instance depuis dif
 
 Un point d'amélioration du service serait la mise en place complète et totale d'un PF au sein de l'instance.
 
-.. _IPV4HTTPS:
 Protocole HTTP & HTTPS
 ========================
 
-Vous trouverez l'ensemble des informations relatives à la sécurité de l'application sur la page dédiée à l'IPv6 et la SSI : 
+Vous trouverez l'ensemble des informations relatives à la sécurité de l'application sur la page dédiée à la SSI_.
 
-:ref:`SSI`
+.. _SSI: https://pfralanjbx.readthedocs.io/fr/latest/SSI.html
