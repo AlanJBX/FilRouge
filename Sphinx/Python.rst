@@ -64,7 +64,7 @@ Il serait envisageable d'effectuer les améliorations suivantes :
 * Gestion plus évoluées des erreurs (afin prendre en comptes les codes status)
 * Passage en API RESTfull
 * Mise en place de l'AutoDoc en lien avec les DocStrings rédigées
-
+* Résolution du problème de buffer pour l'appel à une autre API
 
 Programmation sous Python et Flask
 ===================================

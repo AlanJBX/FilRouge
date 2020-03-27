@@ -169,3 +169,8 @@ SAV
 
 Dans le cas d'un problème technique, vous pouvez me joindre à mon adresse mail @student-cs.fr.
 Notament dans le cadre de la gestion de l'API Rekognition qui nécessite une autorisation préalable et temporaire sur RosettaHub depuis mon compte personnel afin d'être utilisée.
+
+Remerciements
+++++++++++++++
+
+A ma fille qui m'a appris à la bercer dans un bras et coder de la main libre. Et à ma conjointe, bien conciliante.
