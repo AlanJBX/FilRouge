@@ -1,1 +1,8 @@
 PSphinxTheme==2.0.5
+texlive-full
+texlive-lang-french
+texlive-fonts-recommended
+texlive-latex-recommended
+texlive-latex-extra
+texlive-generic-extra
+texlive-latex-base
