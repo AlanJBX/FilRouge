@@ -27,6 +27,8 @@ Fonctions développées
 
 	- Gestion des erreurs d'extension, oui
 
+	- Appel d'un autre API, en partie
+
 Mise en oeuvre
 ~~~~~~~~~~~~~~~
 
@@ -100,6 +102,9 @@ Modules développés
 
 * Module Serverless_ : permet de gérer l'application en version serverless
 .. _Serverless : https://pfralanjbx.readthedocs.io/IAAS.html#code-serverless
+
+* Module ViaCURL_ : permet d'appeller une autre API pour la conversion
+.. _ViaCURL : https://pfralanjbx.readthedocs.io/Codes.html#appel-vers-une-autre-api-viaCurl.py
 
 Application au format RESTFull
 ===============================
@@ -205,6 +210,13 @@ La gestion des métadonnées va dépendre principalement de l'extension du fichi
 
 	Vous trouverez toutes les informations disponibles au lien suivant : 'https://pythonhosted.org/PyPDF2/Other%20Classes.html'
 
+Appel vers une autre API
+==========================
+
+Un module_ permettant d'appeller une autre API a été développé. Il permet d'appeller l'API sur le serveur HTTP pour convertir un fiche "text/plain".
+Si l'appel et la conversion fonctionnent parfaitement quand l'API est en route, cela n'est plus le cas lorsque l'API HTTP est éteinte. En effet, un problème sur le buffer du 'request.files' n'a pas pu être gérer. Le buffer lit entièrement le fichier à convertir lors de l'appel à l'API et se retrouve en bout de fichier lorsqu'il passe à l'API HTTPS en cas d'échec de la première.
+
+.. _module : https://pfralanjbx.readthedocs.io/Codes.html#appel-vers-une-autre-api-viaCurl.py
 
 Code source de l'application
 =============================

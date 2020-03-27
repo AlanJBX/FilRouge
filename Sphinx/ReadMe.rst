@@ -149,6 +149,8 @@ Python :
 
 - Mise en place de l'AutoDoc en lien avec les DocStrings rédigées
 
+- Résolution du problème de buffer pour l'appel à une autre API
+
 SSI :
 
 - Générateur de mot de passe aléatoire

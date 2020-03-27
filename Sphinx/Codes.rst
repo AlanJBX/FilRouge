@@ -35,3 +35,7 @@ Gestion des logs~, logger.py
 Générateur Swagger, swagger.py
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. literalinclude:: ../Flask/functions/swagger.py
+
+Appel d'une autre API, viaCurl.py
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. literalinclude:: ../Flask/functions/viaCurl.py

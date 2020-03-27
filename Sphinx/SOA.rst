@@ -76,6 +76,10 @@ L'application développée est connectée au Bucket S3 d'Amazon et appelle l'API
 
 .. _Rekognition : https://pfralanjbx.readthedocs.io/IAAS.html#aws-rekognition
 
+Une tentative de connection à une autre API de conversion de fichier en JSON a été également implémenté. Plus d'informations : Python_.
+
+.. _Python : https://pfralanjbx.readthedocs.io/Python.html#appel-vers-une-autre-api
+
 
 Documentation
 ==============

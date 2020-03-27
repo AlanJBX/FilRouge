@@ -125,7 +125,7 @@ def toJSON(fichier, bucket_perso):
 			reponse = {}
 			reponse["file"] = fichierJSON
 			reponse["name"] = fichierNomJSON
-
+			
 			return reponse
 
 		except Exception as err:

@@ -117,7 +117,7 @@ def upload_file(local_file, bucket, s3_file):
 
 		s3 = boto3.client('s3')
 
-		s3.upload_fileobj(local_file, bucket, s3_file)
+		s3.upload_file(local_file, bucket, s3_file)
 
 		logger.info("Transfert du fichier vers le bucket validé ")
 		return True

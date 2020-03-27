@@ -289,11 +289,11 @@ def JSONify():
 				try:
 
 					logger.info(session['name'] + " | Début conversion via CURL")
-					return_json = viaCurl(request.files["data_file"])				
-					logger.info(session['name'] + " | Fin conversion via CURL")
+					return_json = viaCurl(request.files["data_file"],request.files["data_file"].content_type) # Envoi pour conversion par une autre API
 
-				except:
+				except Exception as err:
 
+					logger.warning(session['name'] + " | Erreur dans la gestion du Curl | " + str(err))
 					return_json = toJSON(request.files["data_file"],bucket_perso) # Conversion du fichier
 
 			else:
@@ -305,6 +305,7 @@ def JSONify():
 		except Exception as err:
 
 			logger.error(session['name'] + " | Erreur dans la conversion | " + str(err))
+			flash("Erreur dans la conversion")
 			return redirect(url_for('convert'))
 
 	else:
