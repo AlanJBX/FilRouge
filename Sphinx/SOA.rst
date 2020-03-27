@@ -11,7 +11,7 @@ Présentation générale
 La gestion de l'API se fait de trois manières différentes :
 * une documentation open-source de l'application : permettant à chaque de se l'approprier et de l'améliorer.
 * une gestion API : via un API manager pour accéder à l'application
-* une document swagger : permettant de rapidement obtenir les requêtes nécessaires à l'utilisation de l'API.
+* un document swagger : permettant de rapidement obtenir les requêtes nécessaires à l'utilisation de l'API.
 
 Fonctions développées
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -76,7 +76,7 @@ L'application développée est connectée au Bucket S3 d'Amazon et appelle l'API
 
 .. _Rekognition : https://pfralanjbx.readthedocs.io/IAAS.html#aws-rekognition
 
-Une tentative de connection à une autre API de conversion de fichier en JSON a été également implémenté. Plus d'informations : Python_.
+Une tentative de connexion à une autre API de conversion de fichier en JSON a été également implémenté. Plus d'informations : Python_.
 
 .. _Python : https://pfralanjbx.readthedocs.io/Python.html#appel-vers-une-autre-api
 

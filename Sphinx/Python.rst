@@ -61,7 +61,7 @@ Il serait envisageable d'effectuer les améliorations suivantes :
 
 * Augmentation des extensions et métadonnées liées (pour les vidéos notamment)
 * Prise en compte du MIMEType
-* Gestion plus évoluées des erreurs (afin prendre en comptes les codes status)
+* Gestion plus évoluée des erreurs (afin prendre en comptes les codes status)
 * Passage en API RESTfull
 * Mise en place de l'AutoDoc en lien avec les DocStrings rédigées
 * Résolution du problème de buffer pour l'appel à une autre API
@@ -103,13 +103,13 @@ Modules développés
 * Module Serverless_ : permet de gérer l'application en version serverless
 .. _Serverless : https://pfralanjbx.readthedocs.io/IAAS.html#code-serverless
 
-* Module ViaCURL_ : permet d'appeller une autre API pour la conversion
+* Module ViaCURL_ : permet d'appeler une autre API pour la conversion
 .. _ViaCURL : https://pfralanjbx.readthedocs.io/Codes.html#appel-vers-une-autre-api-viaCurl.py
 
 Application au format RESTFull
 ===============================
 
-L'application est développée afin de correspondre qu'en partie aux propriétés RESTfull. Notament la partie authentification et la partie liens entre les ressources.
+L'application est développée afin de correspondre qu'en partie aux propriétés RESTfull. Notament la partie 'authentification' et la partie 'liens entre les ressources'.
 
 * **URI comme identifiant** : chaque ressource de l'API est défini par une URI propre et hiérarchisée
 
@@ -184,7 +184,7 @@ La gestion des métadonnées va dépendre principalement de l'extension du fichi
 	Les métadonnées suivantes sont générées pour l'ensemble des extensions prises en compte.
 		- nom du fichier
 		- MIMEType du fichier
-		- taile du fichier
+		- taille du fichier
 		- nom de l'extension
 
 .. topic:: Gestion des images (.jpeg, .png, .jpg, .gif, .bmp)
@@ -214,7 +214,7 @@ Appel vers une autre API
 ==========================
 
 Un module_ permettant d'appeller une autre API a été développé. Il permet d'appeller l'API sur le serveur HTTP pour convertir un fiche "text/plain".
-Si l'appel et la conversion fonctionnent parfaitement quand l'API est en route, cela n'est plus le cas lorsque l'API HTTP est éteinte. En effet, un problème sur le buffer du 'request.files' n'a pas pu être gérer. Le buffer lit entièrement le fichier à convertir lors de l'appel à l'API et se retrouve en bout de fichier lorsqu'il passe à l'API HTTPS en cas d'échec de la première.
+Si l'appel et la conversion fonctionnent parfaitement quand l'API est en route, cela n'est plus le cas lorsque l'API HTTP est éteinte. En effet, un problème sur le buffer du 'request.files' n'a pas pu être géré. Le buffer lit entièrement le fichier à convertir lors de l'appel à l'API et se retrouve en bout de fichier lorsqu'il passe à l'API HTTPS en cas d'échec de la première.
 
 .. _module : https://pfralanjbx.readthedocs.io/Codes.html#appel-vers-une-autre-api-viaCurl.py
 

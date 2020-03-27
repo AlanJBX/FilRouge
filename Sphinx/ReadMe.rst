@@ -16,7 +16,7 @@ Dans un premier temps afin de découvrir l'outil conçu, je vous invite à vous 
 
 .. centered:: http://54.246.242.159:8000/swagger/
 
-Vous trouverez les quatres fonctionnalités suivantes :
+Vous trouverez les quatre fonctionnalités suivantes :
 
 - Convertisseur de fichier : convertit un fichier donné en un fichier au format JSON : {métadonnées, fichier_binaire}
 
@@ -26,7 +26,7 @@ Vous trouverez les quatres fonctionnalités suivantes :
 
 - Récupération d'un fichier : récupère un fichier JSONifié donné du bucket de stockage
 
-La différence entre la version HTTPS et HTTP, en plus d'être la présence ou non d'un certificat, est que la version HTTPS est plus 'lourde' d'utilisation avec un système de log plus précis et un système d'authentification complet. L'intéret de la version 'HTTP' a été de permettre de développer certains POC qui ont par la suite été mis en place dans le HTTPS.
+La différence entre la version HTTPS et HTTP, en plus d'être la présence ou non d'un certificat, est que la version HTTPS est plus 'lourde' d'utilisation avec un système de log plus précis et un système d'authentification complet. L'intérêt de la version 'HTTP' a été de permettre de développer certains POC qui ont par la suite été mis en place dans le HTTPS.
 
 Afin d'accéder à l'ensemble de la documentation de ce projet, vous pouvez soit lire le PDF présent à la racine du repository ou vous rendre sur le lien suivant :
 
@@ -76,11 +76,13 @@ Briques développées :
 
 	- API type RESTFull, en partie
 
-	- Gestion des extension, oui
+	- Gestion des extensions, oui
 
 	- Gestion des métadonnées, oui
 
 	- Gestion des erreurs d'extension, oui
+
+	- Appel d'un autre API, en partie
 
 .. topic:: SSI :
 
@@ -127,7 +129,7 @@ De petites difficultés ont rencontrées sur l'ensemble du projet et sur l'ensem
 
 - **Automatisation** : afin d'avoir un code propre et facilement debuggable, j'ai tenté d'automatisé le plus possible de chose. Il reste néanmoins de nombreuses choses à effectuer. Cette difficulté a eu pour principal effet de me faire perdre beaucoup de temps pour des gains marginaux.
 
-- **Spécificité et compatibilités** : afin de faire correspondre mon idée de mon programme aux capacités de chaque technologie, il m'a fallut chercher les méthodes spécifiques à chacune d'entre elle. Cette difficulté a eu pour effet principal de rendre le code plus efficace et de me faire montée en compétence.
+- **Spécificité et compatibilités** : afin de faire correspondre mon idée de mon programme aux capacités de chaque technologie, il m'a fallu chercher les méthodes spécifiques à chacune d'entre elle. Cette difficulté a eu pour effet principal de rendre le code plus efficace et de me faire montée en compétence.
 
 
 Améliorations potentielles
@@ -143,7 +145,7 @@ Python :
 
 - Prise en compte du MIMEType
 
-- Gestion plus évoluées des erreurs (afin prendre en comptes les codes status)
+- Gestion plus évoluée des erreurs (afin prendre en comptes les codes status)
 
 - Passage en API RESTfull
 
@@ -168,7 +170,7 @@ SAV
 ++++
 
 Dans le cas d'un problème technique, vous pouvez me joindre à mon adresse mail @student-cs.fr.
-Notament dans le cadre de la gestion de l'API Rekognition qui nécessite une autorisation préalable et temporaire sur RosettaHub depuis mon compte personnel afin d'être utilisée.
+Notamment dans le cadre de la gestion de l'API Rekognition qui nécessite une autorisation préalable et temporaire sur RosettaHub depuis mon compte personnel afin d'être utilisée.
 
 Remerciements
 ++++++++++++++

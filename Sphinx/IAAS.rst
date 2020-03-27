@@ -8,6 +8,11 @@ Introduction
 Présentation générale
 ~~~~~~~~~~~~~~~~~~~~~~
 
+Le module IAAS s'oriente autour deux modules :
+
+* utilisation d'AWS avec le déploiement d'une instance EC2 et un bucket S3
+
+* déploiement d'une application 'serverless' et de l'API Rekognition d'AWS.
 
 Fonctions développées
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -24,16 +29,13 @@ Fonctions développées
 
 	- Utilisation AWS Rekognition, oui
 
-Mise en oeuvre
-~~~~~~~~~~~~~~~
-
 Serveless
 ==========
 
 La mise en place de ServerLess s'effectue via un environnement virtuel décrit dans la partie Serverless du Git.
 'https://github.com/AlanJBX/FilRouge/tree/master/Serverless'
 
-La partie implémentation du server et la partie code de l'application se trouvent à la fin de ce chapitre_.
+La partie implémentation du serveur et la partie code de l'application se trouvent à la fin de ce chapitre_.
 
 .. _chapitre : https://pfralanjbx.readthedocs.io/fr/latest/IAAS.html#code-serverless
 
@@ -67,7 +69,7 @@ Un bucket S3 a été déployé manuellement via le navigateur Web pour le stocka
 
 Un point d'amélioration serait l'automatisation de la création et de la gestion du bucket à partir d'un programme/script.
 
-En théorie, la suppression des données est fixée à 365 jours.
+En théorie, la suppression des données est fixée à 365 jours dans le code de description du serverless.
 
 .. code-block:: YAML
 

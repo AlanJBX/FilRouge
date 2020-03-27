@@ -41,7 +41,7 @@ Afin de vous connecter à l'instance :
 Infrastructure du serveur
 ===========================
 
-Le serveur se décompose en deux entitées :
+Le serveur se décompose en deux entités :
 
 * un bucket S3 AWS 'stockagefbsdpfilrougealan' composé comme suit :
 

@@ -9,7 +9,7 @@ Deux modules ont été partiellement ou complètement implémentés :
 
 * Module HTTPS : un certificat temporaire a été mis en place pour une connexion certifiée
 
-* Modulen authentification : mise en place d'un traitement des utilisateurs avec connexion par mot de passe à l'application
+* Module authentification : mise en place d'un traitement des utilisateurs avec connexion par mot de passe à l'application
 
 Fonctions développées
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -29,7 +29,7 @@ HTTPS
 
 Dans un premier temps, il a été essayé d'obtenir un certificat à l'aide de *Letsencrypt*, cependant, le nom de domaine du serveur, lié à AWS a été refusé.
 
-Dans un second temps, l'outils *openssl* a permit rapidement de fabriquer un certificat temporaire permettant alors le déploiement du serveur en version HTTPS.
+Dans un second temps, l'outil *openssl* a permi rapidement de fabriquer un certificat temporaire permettant alors le déploiement du serveur en version HTTPS.
 Vous trouverez ci-dessous le certificait utilisé :
 
 .. image:: IMG/cert.png
@@ -47,7 +47,6 @@ Dans le cadre de l'identification/authentification permettant un accès à l'app
 
 
 * Gestion des nouveaux utilisateurs : il est possible de rentrer un nouvel utilisateur à condition que ces identifiant, mot de passe et adresse mail soient conformes. Un mail est alors envoyé à l'administrateur.
-
 
 .. image:: IMG/user.png
    :align: center
