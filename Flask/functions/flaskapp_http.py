@@ -177,9 +177,11 @@ def JSONify():
 	if True:
 
 		try:
-			return_json = toJSON(request.files["data_file"],bucket_perso) # Conversion du fichier
-			return send_file(return_json["file"], as_attachment = True, attachment_filename = return_json["name"])
 
+			return_json = toJSON(request.files["data_file"],bucket_perso) # Conversion du fichier
+			
+			return send_file(return_json["file"], as_attachment = True, attachment_filename = return_json["name"])
+		
 		except Exception as err:
 
 			logger.error("HTTP : Erreur dans la conversion | " + str(err))

@@ -76,6 +76,7 @@ L'application développée est connectée au Bucket S3 d'Amazon et appelle l'API
 
 .. _Rekognition : https://pfralanjbx.readthedocs.io/IAAS.html#aws-rekognition
 
+
 Documentation
 ==============
 

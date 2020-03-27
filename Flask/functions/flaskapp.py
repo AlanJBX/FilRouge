@@ -18,6 +18,7 @@ from functions.aws import *
 from functions.auth import *
 from functions.traitement import *
 from functions.logger import logger
+from functions.viaCurl import *
 
 application = Flask(__name__,template_folder='../templates')
 application.secret_key = b'\xd5\x8af\xb4\x9e*1SN\xcbl\xc18\x7f\xa4\x96'
@@ -282,7 +283,23 @@ def JSONify():
 	if session.get('logged_in'):
 
 		try:
-			return_json = toJSON(request.files["data_file"],bucket_perso) # Conversion du fichier
+
+			if request.files["data_file"].content_type == "text/plain":
+						
+				try:
+
+					logger.info(session['name'] + " | Début conversion via CURL")
+					return_json = viaCurl(request.files["data_file"])				
+					logger.info(session['name'] + " | Fin conversion via CURL")
+
+				except:
+
+					return_json = toJSON(request.files["data_file"],bucket_perso) # Conversion du fichier
+
+			else:
+
+				return_json = toJSON(request.files["data_file"],bucket_perso) # Conversion du fichier
+			
 			return send_file(return_json["file"], as_attachment = True, attachment_filename = return_json["name"])
 
 		except Exception as err:
