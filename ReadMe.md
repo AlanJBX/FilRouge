@@ -1,6 +1,8 @@
 Introduction
 ==============
 
+### MAJ du 30/03 : coquille dans une url d'un template.
+
 ### Prise en main
 
 Dans un premier temps afin de découvrir l'outil conçu, je vous invite à vous rendre sur les liens suivant :
