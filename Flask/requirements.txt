@@ -65,7 +65,7 @@ ptyprocess==0.6.0
 pyasn1==0.4.7
 pycparser==2.19
 pycurl==7.43.0.5
-Pygments==2.5.2
+Pygments==2.7.4
 pyOpenSSL==19.0.0
 PyPDF2==1.26.0
 pyRFC3339==1.1
