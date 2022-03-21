@@ -88,7 +88,7 @@ Tkinter==0.0.0
 traitlets==4.3.3
 urllib3==1.25.7
 virtualenv==20.0.10
-waitress==1.4.3
+waitress==2.1.1
 wcwidth==0.1.8
 Werkzeug==0.16.0
 wget==3.2
