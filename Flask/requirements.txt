@@ -67,7 +67,7 @@ pycparser==2.19
 pycurl==7.43.0.5
 Pygments==2.5.2
 pyOpenSSL==19.0.0
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 pyRFC3339==1.1
 PySocks==1.7.1
 python-dateutil==2.8.1
